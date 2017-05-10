@@ -27,13 +27,18 @@ h4 {
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: start-justify;
   padding: 20px;
   flex-wrap: wrap; }
+
+.container .container__desc {
+  width: 100%;
+  margin-bottom: 20px; }
 
 .card {
   position: relative;
   width: 24%;
+  margin: 0 .5%;
   margin-bottom: 20px;
   overflow: hidden; }
 
@@ -83,6 +88,9 @@ h4 {
   color: #008EE2;
   cursor: pointer; }
 
+.card__content h3 {
+  padding-right: 20px; }
+
 .card__content-desc {
   max-height: 90px;
   overflow: hidden;
@@ -105,6 +113,7 @@ h4 {
   background: #fff;
   z-index: 800;
   height: 80%;
+  overflow: scroll;
   transition: top 0.5s; }
 
 .card__reveal svg {

@@ -40,9 +40,13 @@ h4 {
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: start-justify;
   padding: 20px;
   flex-wrap: wrap;
+  .container__desc {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 // Card
@@ -50,6 +54,7 @@ h4 {
 .card {
   position: relative;
   width: 24%;
+  margin: 0 .5%;
   margin-bottom: 20px;
   overflow: hidden;
 }
@@ -101,6 +106,9 @@ h4 {
     color: $blue;
     cursor: pointer;
   }
+  h3 {
+    padding-right: 20px;
+  }
 }
 
 .card__content-desc {
@@ -126,6 +134,7 @@ h4 {
   background: #fff;
   z-index: 800;
   height: 80%;
+  overflow: scroll;
   transition: top 0.5s;
   svg {
     position: absolute;
