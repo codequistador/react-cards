@@ -4,13 +4,15 @@ $green:   #189C2C;
 $purple:  #AA4092;
 $red:     #CA1424;
 $orange:  #DF6830;
+$gray:    #73818C;
 
+// Scaffolding
 body {
-  font-family: "ProximaNova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 1rem;
-  line-height: 1.25;
+  line-height: 1.5;
   font-weight: 400;
-  color: #666666;
+  color: $gray;
   -webkit-font-smoothing: antialiased;
   background-color: white;
 }
@@ -23,12 +25,14 @@ body {
 
 h3 {
   font-size: 1.5rem;
+  line-height: 1.25;
   margin: 10px 0 7px;
   color: $blue;
 }
 
 h4 {
   font-size: 1.15rem;
+  line-height: 1.25;
   margin: 0 0 5px;
 }
 
@@ -38,6 +42,8 @@ h4 {
   padding: 20px;
   flex-wrap: wrap;
 }
+
+// Card
 
 .card {
   width: 23%;
@@ -52,6 +58,7 @@ h4 {
     right: 10px;
     color: #fff;
     z-index: 800;
+    font-size: 2rem;
   }
 }
 
@@ -65,25 +72,61 @@ h4 {
   &--blue {
     background: linear-gradient(rgba(0, 142, 226, .5), rgba(0, 142, 226, .5));
   }
+  &--green {
+    background: linear-gradient(rgba(24, 156, 44, .5), rgba(24, 156, 44, .5));
+  }
+  &--purple {
+    background: linear-gradient(rgba(170, 64, 146, .5), rgba(170, 64, 146, .5));
+  }
+  &--red {
+    background: linear-gradient(rgba(202, 20, 36, .5), rgba(202, 20, 366, .5));
+  }
+  &--orange {
+    background: linear-gradient(rgba(223, 104, 48, .5), rgba(223, 104, 48, .5));
+  }
 }
 
 .card__content {
-  
+  position: relative;
+  padding: 0 15px;
+  svg {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 1.5rem;
+    color: $blue;
+  }
 }
 
 .card__content-desc {
-  
+  max-height: 90px;
+  overflow: hidden;
+  content: '';
+  position: relative;
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(transparent 50%, white);
+  }
 }
 
-.card__footer {
-  
+.card__actions {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px 0;
+  a {
+    width: 24%;
+    color: $gray;
+    font-size: 1.5rem;
+  }
 }
 
-.card__footer-actions {
-  
-}
-
-.card__footer-stripe {
+.card__stripe {
   display: block;
   height: 4px;
   width: 100%;
