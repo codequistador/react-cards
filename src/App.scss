@@ -46,7 +46,8 @@ h4 {
 // Card
 
 .card {
-  width: 23%;
+  position: relative;
+  width: 24%;
   margin-bottom: 20px;
 }
 
@@ -114,11 +115,32 @@ h4 {
   }
 }
 
+.card__reveal {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  background: #fff;
+  z-index: 800;
+  height: 80%;
+  transition: top 0.5s;
+  svg {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+  &.isVisible {
+    display: block;
+    top: 0;
+    transition: top 0.5s;
+  }
+}
+
 .card__actions {
   display: flex;
   justify-content: space-between;
   text-align: center;
   padding: 20px 0;
+  z-index: 900;
   a {
     width: 24%;
     color: $gray;
@@ -144,5 +166,18 @@ h4 {
   }
   &--orange {
     background-color: $orange;
+  }
+}
+
+// Responsive. Normally I would have mixins for these... but for the sake of time!
+@media only screen and (max-width: 960px) {
+  .card {
+    width: 49%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 100%;
   }
 }
