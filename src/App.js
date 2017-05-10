@@ -19,7 +19,7 @@ const Card = (props) => {
       <header className="card__header">
         <img alt="Art History 3" className="img--responsive" src={props.header} />
         <a href=""><IconComposeSolid /></a>
-        <div className="card__header-overlay card__header-overlay--blue"></div>
+        <div className={`card__header-overlay card__header-overlay--${props.color}`}></div>
       </header>
 
       <CardContent />
@@ -30,12 +30,19 @@ const Card = (props) => {
         <a href=""><IconChatSolid /></a>
         <a href=""><IconFolderSolid /></a>
       </div>
-      <footer className="card__stripe card__stripe--blue"></footer>
+      <footer className={`card__stripe card__stripe--${props.color}`}></footer>
     </div>
   );
 }
 
 class CardContent extends Component {
+  state = { isRevealed: '' };
+
+  revealFullDesc() {
+    var revealed = (this.state.isRevealed === "") ? "isVisible" : "";
+    this.setState({"isRevealed":revealed});
+  }
+
   render() {
     return (
       <div>
@@ -45,10 +52,10 @@ class CardContent extends Component {
           <div className="card__content-desc">
             <p>Listen, strange women lyin' in ponds distributin' swords is no basis for a system of government. Supreme executive power derives from a mandate from the masses, not from some farcical aquatic ceremony. </p>
           </div>
-          <IconMoreSolid />
+          <IconMoreSolid onClick={this.revealFullDesc.bind(this)} />
         </div>
-        <div className="card__reveal">
-          <IconXSolid />
+        <div className={`card__reveal ${this.state.isRevealed}`}>
+          <IconXSolid  onClick={this.revealFullDesc.bind(this)} />
           <h3>Art History 3</h3>
           <h4>ART HIS 3</h4>
           <p>Listen, strange women lyin' in ponds distributin' swords is no basis for a system of government. Supreme executive power derives from a mandate from the masses, not from some farcical aquatic ceremony. </p>
