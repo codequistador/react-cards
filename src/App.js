@@ -70,14 +70,9 @@ class App extends Component {
   state = { courses: [] };
 
   componentDidMount() {
-    var _this = this;
     this.serverRequest = 
       axios.get('http://canvas-api.herokuapp.com/api/v1/courses?access_token=9be624b4d5206a178fc56921d5bf2c2a')
-        .then(function(response) {
-          _this.setState({
-            courses: response.data
-          });
-        });
+        .then ((response) => this.setState({ courses: response.data }));
   }
 
   componentWillUnmount() {

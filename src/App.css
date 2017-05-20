@@ -30,10 +30,9 @@ h4 {
   justify-content: start-justify;
   padding: 20px;
   flex-wrap: wrap; }
-
-.container .container__desc {
-  width: 100%;
-  margin-bottom: 20px; }
+  .container .container__desc {
+    width: 100%;
+    margin-bottom: 20px; }
 
 .card {
   position: relative;
@@ -44,14 +43,13 @@ h4 {
 
 .card__header {
   position: relative; }
-
-.card__header svg {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: #fff;
-  z-index: 800;
-  font-size: 2rem; }
+  .card__header svg {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    z-index: 800;
+    font-size: 2rem; }
 
 .card__header-overlay {
   position: absolute;
@@ -60,51 +58,43 @@ h4 {
   width: 100%;
   height: 100%;
   z-index: 500; }
-
-.card__header-overlay--blue {
-  background: linear-gradient(rgba(0, 142, 226, 0.5), rgba(0, 142, 226, 0.5)); }
-
-.card__header-overlay--green {
-  background: linear-gradient(rgba(24, 156, 44, 0.5), rgba(24, 156, 44, 0.5)); }
-
-.card__header-overlay--purple {
-  background: linear-gradient(rgba(170, 64, 146, 0.5), rgba(170, 64, 146, 0.5)); }
-
-.card__header-overlay--red {
-  background: linear-gradient(rgba(202, 20, 36, 0.5), rgba(202, 20, 255, 0.5)); }
-
-.card__header-overlay--orange {
-  background: linear-gradient(rgba(223, 104, 48, 0.5), rgba(223, 104, 48, 0.5)); }
+  .card__header-overlay--blue {
+    background: linear-gradient(rgba(0, 142, 226, 0.5), rgba(0, 142, 226, 0.5)); }
+  .card__header-overlay--green {
+    background: linear-gradient(rgba(24, 156, 44, 0.5), rgba(24, 156, 44, 0.5)); }
+  .card__header-overlay--purple {
+    background: linear-gradient(rgba(170, 64, 146, 0.5), rgba(170, 64, 146, 0.5)); }
+  .card__header-overlay--red {
+    background: linear-gradient(rgba(202, 20, 36, 0.5), rgba(202, 20, 255, 0.5)); }
+  .card__header-overlay--orange {
+    background: linear-gradient(rgba(223, 104, 48, 0.5), rgba(223, 104, 48, 0.5)); }
 
 .card__content {
   position: relative;
   padding: 0 15px; }
-
-.card__content svg {
-  position: absolute;
-  top: 0;
-  right: 15px;
-  font-size: 1.5rem;
-  color: #008EE2;
-  cursor: pointer; }
-
-.card__content h3 {
-  padding-right: 20px; }
+  .card__content svg {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #008EE2;
+    cursor: pointer; }
+  .card__content h3 {
+    padding-right: 20px; }
 
 .card__content-desc {
   max-height: 90px;
   overflow: hidden;
   content: '';
   position: relative; }
-
-.card__content-desc:before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: linear-gradient(transparent 50%, white); }
+  .card__content-desc:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(transparent 50%, white); }
 
 .card__reveal {
   position: absolute;
@@ -116,16 +106,14 @@ h4 {
   padding-bottom: 20%;
   overflow: scroll;
   transition: top 0.5s; }
-
-.card__reveal svg {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  cursor: pointer; }
-
-.card__reveal.isVisible {
-  top: 0;
-  transition: top 0.5s; }
+  .card__reveal svg {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer; }
+  .card__reveal.isVisible {
+    top: 0;
+    transition: top 0.5s; }
 
 .card__actions {
   position: relative;
@@ -135,32 +123,26 @@ h4 {
   text-align: center;
   padding: 20px 0;
   z-index: 900; }
-
-.card__actions a {
-  width: 24%;
-  color: #73818C;
-  font-size: 1.5rem; }
+  .card__actions a {
+    width: 24%;
+    color: #73818C;
+    font-size: 1.5rem; }
 
 .card__stripe {
   position: relative;
   height: 4px;
   width: 100%;
   z-index: 900; }
-
-.card__stripe--blue {
-  background-color: #008EE2; }
-
-.card__stripe--green {
-  background-color: #189C2C; }
-
-.card__stripe--purple {
-  background-color: #AA4092; }
-
-.card__stripe--red {
-  background-color: #CA1424; }
-
-.card__stripe--orange {
-  background-color: #DF6830; }
+  .card__stripe--blue {
+    background-color: #008EE2; }
+  .card__stripe--green {
+    background-color: #189C2C; }
+  .card__stripe--purple {
+    background-color: #AA4092; }
+  .card__stripe--red {
+    background-color: #CA1424; }
+  .card__stripe--orange {
+    background-color: #DF6830; }
 
 @media only screen and (max-width: 960px) {
   .card {
